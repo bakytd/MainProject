@@ -8,166 +8,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-    background: #000000;
-    color: #ffffff;
-}
+        body {
+            background: #000000;
+            color: #ffffff;
+        }
 
-#header {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
+        #header {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            background-image: url('img/BK3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
 
-#header-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
+        .container {
+            padding: 5px 10%;
+            position: relative;
+            z-index: 2;
+        }
 
-.container {
-    padding: 5px 10%;
-    position: relative;
-    z-index: 2;
-}
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        .logo {
+            width: 200px;
+        }
 
-.logo {
-    width: 200px;
-}
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
 
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
+        nav ul li {
+            margin: 10px 20px;
+        }
 
-nav ul li {
-    margin: 10px 20px;
-}
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
+        nav ul li a::after {
+            content: '';
+            width: 0;
+            height: 3px;
+            background: #FFD700;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
 
-nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
+        nav ul li a:hover::after {
+            width: 100%;
+        }
 
-nav ul li a:hover::after {
-    width: 100%;
-}
+        .header-text {
+            margin-top: 20%;
+            font-size: 20px;
+        }
 
-.header-text {
-    margin-top: 20%;
-    font-size: 20px;
-}
+        .header-text h1 {
+            font-size: 60px;
+            margin-top: 20px;
+        }
 
-.header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
-}
+        .header-text h1 span {
+            color: #FFD700;
+        }
 
-.header-text h1 span {
-    color: #ff004f;
-}
+        .user-icon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.user-icon {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .user-initials {
+            background: #FFD700;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
 
-.user-initials {
-    background: #ff004f;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-}
+        @media screen and (max-width: 768px) {
+            .menu-icon {
+                display: block;
+            }
 
-.lesson-link {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    background: #111;
-    color: #fff;
-    border: 1px solid #ff004f;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: 0.3s;
-}
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 10%;
+                padding: 20px;
+                border-radius: 10px;
+            }
 
-.lesson-link:hover {
-    background: #ff004f;
-    color: #000;
-}
+            nav ul.show {
+                display: flex;
+            }
 
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 10%;
-        padding: 20px;
-        border-radius: 10px;
-    }
+        /* --- Improved Lesson Section --- */
+        .lesson-background {
+            width: 100%;
+            min-height: 100vh;
+            background-color:black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    nav ul.show {
-        display: flex;
-    }
+        .container1 {
+            padding: 80px 10%;
+            position: relative;
+            z-index: 2;
+        }
 
-    nav ul li {
-        margin: 10px 0;
-    }
-}
+        .container1 h2 {
+            font-size: 36px;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
+        .lesson-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .lesson-card {
+            background-color: #111;
+            border: 1px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            background-color: #FFD700;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -178,10 +200,8 @@ nav ul li a:hover::after {
                     <img src="img/logo.png" class="logo" />
                     <span class="menu-icon" onclick="toggleMenu()">☰</span>
                     <ul id="navLinks" runat="server">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="About.aspx">About</a></li>
-                        <li><a href="#services">Join us</a></li>
-                        <li><a href="Contact.aspx">Contact</a></li>
+                        <li><a href="MainPage.aspx">Home</a></li>
+                        <li><a href="AboutUs.aspx">About</a></li>
                         <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
                             <li><a href="Login.aspx">Login</a></li>
                         </asp:PlaceHolder>
@@ -200,18 +220,24 @@ nav ul li a:hover::after {
             </div>
         </div>
 
-        <asp:Panel ID="lessonSection" runat="server" Visible="false">
-            <div class="container">
-                <h2>Your Lessons</h2>
+        <!-- Improved Lesson Section -->
+       <asp:Panel ID="lessonSection" runat="server" Visible="false">
+    <div class="lesson-background">
+        <div class="container1">
+            <h2>Your Lessons</h2>
+            <div class="lesson-grid">
                 <asp:Repeater ID="lessonRepeater" runat="server">
                     <ItemTemplate>
-                        <a class="lesson-link" href='<%# "lesson.aspx?id=" + Eval("LessonId") %>'>
+                        <a class="lesson-card" href='<%# "lesson.aspx?id=" + Eval("LessonId") %>'>
                             <%# Eval("Title") %>
                         </a>
                     </ItemTemplate>
                 </asp:Repeater>
             </div>
-        </asp:Panel>
+        </div>
+    </div>
+</asp:Panel>
+
     </form>
 
     <script>

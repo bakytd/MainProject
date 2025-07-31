@@ -13,7 +13,7 @@ namespace WebApplication1
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 con.Open();
 
-                // Check if username already exists
+
                 string checkUser = "SELECT COUNT(*) FROM userTable WHERE username = @username";
                 SqlCommand checkCmd = new SqlCommand(checkUser, con);
                 checkCmd.Parameters.AddWithValue("@username", username.Text.Trim());
@@ -26,7 +26,7 @@ namespace WebApplication1
                     return;
                 }
 
-                // Password length validation
+           
                 if (pwd.Text.Length < 8 || pwd.Text.Length > 16)
                 {
                     errMsg.Visible = true;
@@ -34,12 +34,12 @@ namespace WebApplication1
                     return;
                 }
 
-                // Determine user type
+               
                 string userType = "user";
                 if (adminKey.Text == "adminSecret123")
                     userType = "admin";
 
-                // Insert new user
+                
                 string insert = @"INSERT INTO userTable 
                     (gender, country, email, username, password, usertype) 
                     VALUES (@gender, @country, @email, @username, @password, @usertype)";
@@ -53,14 +53,14 @@ namespace WebApplication1
 
                 insertCmd.ExecuteNonQuery();
 
-                // Set session and redirect
+             
                 Session["username"] = username.Text;
                 Session["usertype"] = userType;
 
                 con.Close();
 
                 if (userType == "admin")
-                    Response.Redirect("admin.aspx");
+                    Response.Redirect("AdminNew.aspx");
                 else
                     Response.Redirect("MainPage.aspx");
             }

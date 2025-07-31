@@ -35,7 +35,7 @@ namespace WebApplication1
 
                     if (userType == "admin")
                     {
-                        Response.Redirect("admin.aspx");
+                        Response.Redirect("AdminNew.aspx");
                     }
                     else
                     {

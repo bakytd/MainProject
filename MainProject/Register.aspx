@@ -5,6 +5,8 @@
 <head runat="server">
     <title>Register</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -18,49 +20,68 @@
         }
 
         .form-container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px 30px;
             border-radius: 15px;
-            box-shadow: 0 0 15px #ff004f;
+            box-shadow: 0 0 20px gold;
             width: 400px;
         }
 
         .form-container h2 {
-            color: #ff004f;
+            color: gold;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
-        .form-container label {
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
             display: block;
-            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: 500;
         }
 
-        .form-container input, .form-container select {
+        .form-container input,
+        .form-container select {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
             background: #111;
-            border: 1px solid #ff004f;
+            border: 1px solid gold;
             color: white;
             border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        .form-container input[type=submit], .form-container input[type=button], .form-container .aspNet-Button {
-            background: #ff004f;
-            color: white;
+        .form-container input[type=submit],
+        .form-container input[type=button],
+        .form-container .aspNet-Button {
+            background: gold;
+            color: black;
             border: none;
             cursor: pointer;
             transition: 0.3s;
+            font-weight: bold;
+            border-radius: 8px;
         }
 
-        .form-container input[type=submit]:hover {
-            background: #ff3366;
+        .form-container input[type=submit]:hover,
+        .form-container input[type=button]:hover,
+        .form-container .aspNet-Button:hover {
+            background: #ffd700;
         }
 
-        .error {
+        .error, .aspNet-Validator {
             color: red;
-            margin-top: 10px;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .form-container .submit-wrapper {
+            margin-top: 25px;
+            text-align: center;
         }
     </style>
 </head>
@@ -70,34 +91,54 @@
 
         <asp:Label ID="errMsg" runat="server" CssClass="error" Visible="false" />
 
-        <label>Gender:</label>
-        <asp:DropDownList ID="gender" runat="server">
-            <asp:ListItem>Male</asp:ListItem>
-            <asp:ListItem>Female</asp:ListItem>
-        </asp:DropDownList>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <asp:DropDownList ID="gender" runat="server">
+                <asp:ListItem>Male</asp:ListItem>
+                <asp:ListItem>Female</asp:ListItem>
+            </asp:DropDownList>
+        </div>
 
-        <label>Country:</label>
-        <asp:TextBox ID="country" runat="server" />
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <asp:TextBox ID="country" runat="server" />
+        </div>
 
-        <label>Email:</label>
-        <asp:TextBox ID="email" runat="server" TextMode="Email" />
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <asp:TextBox ID="email" runat="server" TextMode="Email" />
+        </div>
 
-        <label>Username:</label>
-        <asp:TextBox ID="username" runat="server" />
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <asp:TextBox ID="username" runat="server" />
+        </div>
 
-        <label>Password:</label>
-        <asp:TextBox ID="pwd" runat="server" TextMode="Password" />
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <asp:TextBox ID="pwd" runat="server" TextMode="Password" />
+        </div>
 
-        <label>Confirm Password:</label>
-        <asp:TextBox ID="pwd0" runat="server" TextMode="Password" />
-        <asp:CompareValidator ID="cv1" runat="server" ControlToCompare="pwd" ControlToValidate="pwd0"
-            ErrorMessage="Passwords do not match!" ForeColor="Red" Display="Dynamic" />
+        <div class="form-group">
+            <label for="pwd0">Confirm Password:</label>
+            <asp:TextBox ID="pwd0" runat="server" TextMode="Password" />
+            <asp:CompareValidator ID="cv1" runat="server"
+                ControlToCompare="pwd"
+                ControlToValidate="pwd0"
+                ErrorMessage="Passwords do not match!"
+                CssClass="aspNet-Validator"
+                Display="Dynamic"
+                ForeColor="Red" />
+        </div>
 
-        <label>Admin Key (optional):</label>
-        <asp:TextBox ID="adminKey" runat="server" TextMode="Password" />
+        <div class="form-group">
+            <label for="adminKey">Admin Key (optional):</label>
+            <asp:TextBox ID="adminKey" runat="server" TextMode="Password" />
+        </div>
 
-        <br /><br />
-        <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" />
+        <div class="submit-wrapper">
+            <asp:Button ID="Button1" runat="server" Text="Register" CssClass="aspNet-Button" OnClick="Button1_Click" />
+        </div>
     </form>
 </body>
 </html>

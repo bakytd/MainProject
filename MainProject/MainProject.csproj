@@ -100,13 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="admin.aspx" />
-    <Content Include="AdminDashboard.aspx" />
-    <Content Include="adminStats.aspx" />
-    <Content Include="App_Data\FinalDB1.mdf" />
-    <Content Include="App_Data\FinalDB1_log.ldf">
-      <DependentUpon>FinalDB1.mdf</DependentUpon>
-    </Content>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="AdminNew.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -129,10 +124,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
+    <Content Include="img\AboutUs.jpg" />
     <Content Include="img\back.png" />
     <Content Include="img\back2222.mp4" />
     <Content Include="img\back333.mp4" />
     <Content Include="img\back_vide.png" />
+    <Content Include="img\Bk.jpg" />
+    <Content Include="img\BK2.jpg" />
+    <Content Include="img\BK3.jpg" />
     <Content Include="img\ChatGPT Image 30 июн. 2025 г., 11_25_08.png" />
     <Content Include="img\eb0ed0f14774acb86362a925701d10a4.mp4" />
     <Content Include="img\logo.png" />
@@ -203,26 +202,19 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="admin.aspx.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.cs">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboard.aspx.cs">
-      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    <Compile Include="AdminNew.aspx.cs">
+      <DependentUpon>AdminNew.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.aspx.designer.cs">
-      <DependentUpon>AdminDashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="adminStats.aspx.cs">
-      <DependentUpon>adminStats.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="adminStats.aspx.designer.cs">
-      <DependentUpon>adminStats.aspx</DependentUpon>
+    <Compile Include="AdminNew.aspx.designer.cs">
+      <DependentUpon>AdminNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -308,7 +300,9 @@
       <DependentUpon>MainPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />

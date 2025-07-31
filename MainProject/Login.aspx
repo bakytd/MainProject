@@ -9,71 +9,86 @@
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
-            background: black;
-            color: white;
+            background: #000; /* Black background */
+            color: #fff;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         .form-container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #ff004f;
-            width: 400px;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 40px 35px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px gold;
+            width: 100%;
+            max-width: 400px;
         }
 
-        .form-container h2 {
-            color: #ff004f;
+        h2 {
             text-align: center;
-            margin-bottom: 20px;
+            color: gold;
+            margin-bottom: 30px;
+            font-size: 28px;
         }
 
-        .form-container label {
+        label {
             display: block;
-            margin-top: 10px;
+            margin: 15px 0 5px;
+            font-weight: 500;
         }
 
-        .form-container input {
+        input[type="text"],
+        input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
             background: #111;
-            border: 1px solid #ff004f;
+            border: 1px solid gold;
             color: white;
             border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        .form-container .btn {
-            background: #ff004f;
-            color: white;
+        .btn {
+            width: 100%;
+            background: gold;
+            color: black;
             border: none;
+            border-radius: 8px;
+            padding: 12px;
+            margin-top: 20px;
+            font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
-            margin-top: 15px;
+            transition: background 0.3s ease;
         }
 
-        .form-container .btn:hover {
-            background: #ff3366;
+        .btn:hover {
+            background: #ffd700;
         }
 
         .error {
             color: red;
             margin-top: 10px;
+            text-align: center;
         }
 
         .register-link {
-            margin-top: 15px;
-            color: #999;
+            margin-top: 20px;
             text-align: center;
-            display: block;
+            font-size: 14px;
+            color: #cccccc;
         }
 
         .register-link a {
-            color: #ff004f;
+            color: gold;
             text-decoration: none;
+            font-weight: 500;
+        }
+
+        .register-link a:hover {
+            color: white;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -83,11 +98,11 @@
 
         <asp:Label ID="lblError" runat="server" CssClass="error" Visible="false" />
 
-        <label>Username:</label>
-        <asp:TextBox ID="username" runat="server" />
+        <label for="username">Username</label>
+        <asp:TextBox ID="username" runat="server" CssClass="input" />
 
-        <label>Password:</label>
-        <asp:TextBox ID="password" runat="server" TextMode="Password" />
+        <label for="password">Password</label>
+        <asp:TextBox ID="password" runat="server" CssClass="input" TextMode="Password" />
 
         <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn" OnClick="btnLogin_Click" />
 
@@ -97,3 +112,7 @@
     </form>
 </body>
 </html>
+
+
+
+
