@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="MainProject.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server"></asp:ContentPlaceHolder></title>
+    <link rel="stylesheet" href="Content/styles.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <header class="main-header">
+            <div class="container">
+                <nav>
+                    <img src="img/logo.png" class="logo" alt="NetSmart Logo" />
+                    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+                    <ul id="navLinks" runat="server">
+                        <li><a href="MainPage.aspx">Home</a></li>
+                        <li><a href="AboutUs.aspx">About</a></li>
+                        <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
+                            <li><a href="Login.aspx">Login</a></li>
+                        </asp:PlaceHolder>
+                        <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                            <li class="user-icon">
+                                <div class="user-initials" id="userInitials" runat="server"></div>
+                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                            </li>
+                        </asp:PlaceHolder>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </main>
+    </form>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navLinks");
+            nav.classList.toggle("show");
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Scripts" runat="server"></asp:ContentPlaceHolder>
+</body>
+</html>
