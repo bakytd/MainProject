@@ -13,5 +13,23 @@ namespace MainProject
 
     public partial class MainPage
     {
+
+        /// <summary>
+        /// btnGetStarted control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnGetStarted;
+
+        /// <summary>
+        /// btnCta control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btnCta;
     }
 }
