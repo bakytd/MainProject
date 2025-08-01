@@ -83,7 +83,7 @@
     <section class="cta">
         <div class="container">
             <h2>Ready to Begin Your Digital Journey?</h2>
-            <asp:HyperLink ID="btnCta" runat="server" NavigateUrl="~/Registration.aspx" CssClass="cta-button">
+            <asp:HyperLink ID="btnCta" runat="server" NavigateUrl="~/Register.aspx" CssClass="cta-button">
                 Join Now - It's Free!
             </asp:HyperLink>
         </div>

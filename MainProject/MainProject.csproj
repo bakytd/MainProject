@@ -101,11 +101,11 @@
     <Content Include="AdminNew.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\aboutus.css" />
+    <Content Include="Content\admin.css" />
     <Content Include="Content\adminnew.css" />
     <Content Include="Content\lesson.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\mainpage.css" />
-    <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\lessons.css" />
@@ -143,6 +143,7 @@
     <Content Include="MainPage.aspx" />
     <Content Include="App_Data\MyDB1.dacpac" />
     <Content Include="Site.Master" />
+    <Content Include="AdminMaster.Master" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -182,6 +183,13 @@
     </Compile>
     <Compile Include="AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="AdminNew.aspx.cs">
       <DependentUpon>AdminNew.aspx</DependentUpon>

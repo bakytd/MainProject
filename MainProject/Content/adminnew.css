@@ -1,14 +1,4 @@
 /* AdminNew.aspx page specific styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0d0d0d;
-    color: #ffffff;
-    padding: 30px 5vw;
-}
-
-header {
-    margin-bottom: 40px;
-}
 
 h1 {
     font-size: 2.5rem;
