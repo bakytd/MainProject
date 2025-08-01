@@ -54,31 +54,31 @@
             display: flex;
         }
 
-        nav ul li {
-            margin: 10px 20px;
-        }
+            nav ul li {
+                margin: 10px 20px;
+            }
 
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-        }
+                nav ul li a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 18px;
+                    position: relative;
+                }
 
-        nav ul li a::after {
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #FFD700;
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            transition: 0.5s;
-        }
+                    nav ul li a::after {
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: #FFD700;
+                        position: absolute;
+                        left: 0;
+                        bottom: -6px;
+                        transition: 0.5s;
+                    }
 
-        nav ul li a:hover::after {
-            width: 100%;
-        }
+                    nav ul li a:hover::after {
+                        width: 100%;
+                    }
 
         .user-icon {
             display: flex;
@@ -114,13 +114,13 @@
                 border-radius: 10px;
             }
 
-            nav ul.show {
-                display: flex;
-            }
+                nav ul.show {
+                    display: flex;
+                }
 
-            nav ul li {
-                margin: 10px 0;
-            }
+                nav ul li {
+                    margin: 10px 0;
+                }
         }
 
         #about {
@@ -138,10 +138,10 @@
             margin-bottom: 30px;
         }
 
-        .about-col-1 img {
-            width: 100%;
-            border-radius: 15px;
-        }
+            .about-col-1 img {
+                width: 100%;
+                border-radius: 15px;
+            }
 
         .about-col-2 {
             flex-basis: 60%;
@@ -167,44 +167,44 @@
             color: #fff;
         }
 
-        .tab-links::after {
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #FFD700;
-            position: absolute;
-            left: 0;
-            bottom: -8px;
-            transition: 0.5s;
-        }
+            .tab-links::after {
+                content: '';
+                width: 0;
+                height: 3px;
+                background: #FFD700;
+                position: absolute;
+                left: 0;
+                bottom: -8px;
+                transition: 0.5s;
+            }
 
-        .tab-links.active-link::after {
-            width: 50%;
-        }
+            .tab-links.active-link::after {
+                width: 50%;
+            }
 
         .tab-contents ul {
             padding-left: 20px;
         }
 
-        .tab-contents ul li {
-            list-style: none;
-            margin: 10px 0;
-        }
+            .tab-contents ul li {
+                list-style: none;
+                margin: 10px 0;
+            }
 
-        .tab-contents ul li span {
-            color: #FFD700;
-            font-size: 14px;
-            font-weight: bold;
-            display: inline-block;
-        }
+                .tab-contents ul li span {
+                    color: #FFD700;
+                    font-size: 14px;
+                    font-weight: bold;
+                    display: inline-block;
+                }
 
         .tab-contents {
             display: none;
         }
 
-        .tab-contents.active-tab {
-            display: block;
-        }
+            .tab-contents.active-tab {
+                display: block;
+            }
 
         @media (max-width: 768px) {
             .row {
@@ -231,13 +231,11 @@
                 <ul id="navLinks" runat="server">
                     <li><a href="MainPage.aspx">Home</a></li>
                     <li><a href="AboutUs.aspx">About</a></li>
-                    <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
-                      
-                    </asp:PlaceHolder>
+                    <asp:PlaceHolder ID="phNotLoggedIn" runat="server"></asp:PlaceHolder>
                     <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
                         <li class="user-icon">
                             <div class="user-initials" id="userInitials" runat="server"></div>
-                            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" ForeColor="White" Style="text-decoration:none;">Logout</asp:LinkButton>
+                            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" ForeColor="White" Style="text-decoration: none;">Logout</asp:LinkButton>
                         </li>
                     </asp:PlaceHolder>
                 </ul>
@@ -253,39 +251,47 @@
                     <div class="about-col-2">
                         <h1 class="sub-title">About Us</h1>
                         <p>
-                            Welcome to <strong>NetSmart</strong>, founded in 2025 with a mission to empower innovation in the digital age. We are a dynamic technology solutions provider that helps businesses embrace digital transformation through smart software, powerful data solutions, and future-ready platforms.
-                            <br><br>
-                            Our passion lies in building scalable, efficient, and human-centered systems that power everything from startups to global enterprises. With a strong commitment to integrity, inclusivity, and excellence, we strive to be more than just a tech provider—we’re your strategic partner in progress.
-                            <br><br>
-                            At NetSmart, we combine cutting-edge development with real-world strategy. Whether you're looking to automate operations, scale with cloud, or innovate with AI, we're here to elevate your potential.
+                            Welcome to <strong>NetSmart</strong>, your friendly guide to digital confidence! Founded in 2025, we help newcomers build essential computer skills in a judgment-free environment. Whether you're learning to send your first email, video call family, or stay safe online, we make technology simple and approachable.
+   
+                            <br>
+                            <br>
+                            Our patient, step-by-step teaching method helps seniors, tech beginners, and anyone feeling left behind in our digital world. We believe everyone deserves to participate confidently in today's connected society - no prior experience needed!
+   
+                            <br>
+                            <br>
+                            At NetSmart, we replace confusion with confidence through free resources, in-person workshops, and personalized coaching. Your digital journey starts here!
                         </p>
 
                         <div class="tab-skills">
-                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                            <p class="tab-links active-link" onclick="openTab('skills')">Learn the Basics</p>
+                            <p class="tab-links" onclick="openTab('experience')">Our Workshops</p>
+                            <p class="tab-links" onclick="openTab('education')">Meet the Team</p>
                         </div>
 
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>Software Engineering:</span> Proficient in full-stack development and scalable architecture</li>
-                                <li><span>Cloud Solutions:</span> AWS, Azure, and hybrid cloud integration</li>
-                                <li><span>AI & Automation:</span> Implementing smart tools and data-driven systems</li>
+                                <li><span>Computer Essentials:</span> Mouse/keyboard skills, file management, basic troubleshooting</li>
+                                <li><span>Internet Fundamentals:</span> Safe browsing, email setup, avoiding online scams</li>
+                                <li><span>Smartphone Basics:</span> App installation, video calls, mobile security</li>
+                                <li><span>Daily Digital Tools:</span> Online forms, video conferencing, digital payments</li>
                             </ul>
                         </div>
 
                         <div class="tab-contents" id="experience">
                             <ul>
-                                <li><span>Enterprise Projects:</span> Delivered 5 enterprise-level solutions across industries</li>
-                                <li><span>Tech Partnerships:</span> Collaborated with Fortune 5 clients and leading startups</li>
-                                <li><span>Innovation Labs:</span> Developed award-winning prototypes and emerging tech platforms</li>
+                                <li><span>Free Community Classes:</span> Weekly sessions at local libraries (all ages welcome)</li>
+                                <li><span>"Tech Buddies" Program:</span> 1-on-1 coaching for personalized learning</li>
+                                <li><span>Senior Digital Cafés:</span> Social learning groups with refreshments</li>
+                                <li><span>Online Video Library:</span> 50+ step-by-step tutorials (accessible anytime)</li>
                             </ul>
                         </div>
 
                         <div class="tab-contents" id="education">
                             <ul>
-                                <li><span>Certifications:</span> AWS Certified Solutions Architect, Microsoft Azure Developer, PMP</li>
-                                <li><span>Training Programs:</span> In-house mentoring, leadership coaching, and cross-functional skill development</li>
+                                <li><span>Our Instructors:</span> Patient teachers with 5+ years experience in adult education</li>
+                                <li><span>Teaching Philosophy:</span> "Go at your pace" methodology with zero tech jargon</li>
+                                <li><span>Community Focus:</span> Partnered with 15+ local organizations to bridge the digital divide</li>
+                                <li><span>Credentials:</span> Google Digital Literacy certified • CompTIA ITF+ • AARP Digital Skills trained</li>
                             </ul>
                         </div>
                     </div>

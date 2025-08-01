@@ -27,7 +27,6 @@
             width: 100%;
             height: 100vh;
             position: relative;
-            background-image: url('img/BK3.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -60,45 +59,45 @@
             display: flex;
         }
 
-        nav ul li {
-            margin: 10px 20px;
-        }
+            nav ul li {
+                margin: 10px 20px;
+            }
 
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 18px;
-            position: relative;
-        }
+                nav ul li a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    font-size: 18px;
+                    position: relative;
+                }
 
-        nav ul li a::after {
-            content: '';
-            width: 0;
-            height: 3px;
-            background: #FFD700;
-            position: absolute;
-            left: 0;
-            bottom: -6px;
-            transition: 0.5s;
-        }
+                    nav ul li a::after {
+                        content: '';
+                        width: 0;
+                        height: 3px;
+                        background: #FFD700;
+                        position: absolute;
+                        left: 0;
+                        bottom: -6px;
+                        transition: 0.5s;
+                    }
 
-        nav ul li a:hover::after {
-            width: 100%;
-        }
+                    nav ul li a:hover::after {
+                        width: 100%;
+                    }
 
         .header-text {
             margin-top: 20%;
             font-size: 20px;
         }
 
-        .header-text h1 {
-            font-size: 60px;
-            margin-top: 20px;
-        }
+            .header-text h1 {
+                font-size: 60px;
+                margin-top: 20px;
+            }
 
-        .header-text h1 span {
-            color: #FFD700;
-        }
+                .header-text h1 span {
+                    color: #FFD700;
+                }
 
         .user-icon {
             display: flex;
@@ -134,20 +133,19 @@
                 border-radius: 10px;
             }
 
-            nav ul.show {
-                display: flex;
-            }
+                nav ul.show {
+                    display: flex;
+                }
 
-            nav ul li {
-                margin: 10px 0;
-            }
+                nav ul li {
+                    margin: 10px 0;
+                }
         }
 
-        /* --- Improved Lesson Section --- */
         .lesson-background {
             width: 100%;
             min-height: 100vh;
-            background-color:black;
+            background-color: black;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -159,12 +157,12 @@
             z-index: 2;
         }
 
-        .container1 h2 {
-            font-size: 36px;
-            color: #FFD700;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+            .container1 h2 {
+                font-size: 36px;
+                color: #FFD700;
+                text-align: center;
+                margin-bottom: 40px;
+            }
 
         .lesson-grid {
             display: grid;
@@ -185,11 +183,11 @@
             text-decoration: none;
         }
 
-        .lesson-card:hover {
-            transform: translateY(-5px);
-            background-color: #FFD700;
-            color: #000;
-        }
+            .lesson-card:hover {
+                transform: translateY(-5px);
+                background-color: #FFD700;
+                color: #000;
+            }
     </style>
 </head>
 <body>
@@ -208,35 +206,35 @@
                         <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
                             <li class="user-icon">
                                 <div class="user-initials" id="userInitials" runat="server"></div>
-                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" ForeColor="White" Style="text-decoration:none;">Logout</asp:LinkButton>
+                                <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" ForeColor="White" Style="text-decoration: none;">Logout</asp:LinkButton>
                             </li>
                         </asp:PlaceHolder>
                     </ul>
                 </nav>
 
                 <div class="header-text">
-                    <h1>Master the Digital World.<br /><span>Smart. Safe. Strong.</span></h1>
+                    <h1>Master the Digital World.<br />
+                        <span>Smart. Safe. Strong.</span></h1>
                 </div>
             </div>
         </div>
 
-        <!-- Improved Lesson Section -->
-       <asp:Panel ID="lessonSection" runat="server" Visible="false">
-    <div class="lesson-background">
-        <div class="container1">
-            <h2>Your Lessons</h2>
-            <div class="lesson-grid">
-                <asp:Repeater ID="lessonRepeater" runat="server">
-                    <ItemTemplate>
-                        <a class="lesson-card" href='<%# "lesson.aspx?id=" + Eval("LessonId") %>'>
-                            <%# Eval("Title") %>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
+        <asp:Panel ID="lessonSection" runat="server" Visible="false">
+            <div class="lesson-background">
+                <div class="container1">
+                    <h2>Your Lessons</h2>
+                    <div class="lesson-grid">
+                        <asp:Repeater ID="lessonRepeater" runat="server">
+                            <ItemTemplate>
+                                <a class="lesson-card" href='<%# "lesson.aspx?id=" + Eval("LessonId") %>'>
+                                    <%# Eval("Title") %>
+                                </a>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</asp:Panel>
+        </asp:Panel>
 
     </form>
 
