@@ -1,47 +1,72 @@
-/* MainPage page specific styles */
-#header {
+/* Main Page Specific Styles */
+.hero {
     width: 100%;
-    height: 100vh;
+    height: 60dvh;
     position: relative;
+    background-image: url('../img/MainBG.jpg');
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-.header-text {
-    margin-top: 20%;
-    font-size: 20px;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
 }
 
-.header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+.hero-content {
+    position: relative;
+    z-index: 2; /* Ensures content stays above the tint */
 }
 
-.header-text h1 span {
-    color: #FFD700;
+.hero-text {
+    width: 100%;
+    text-align: left;
+    color: white;
+    padding: 0 20px;
 }
+
+    .hero-text h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero-text .tagline {
+        font-size: 24px;
+        color: #FFD700;
+        font-weight: 500;
+    }
 
 .lesson-background {
     width: 100%;
-    min-height: 100vh;
+    min-height: 50vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 80px 0;
 }
 
-.container1 {
-    padding: 80px 10%;
-    position: relative;
-    z-index: 2;
+.lesson-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container1 h2 {
-    font-size: 36px;
-    color: #FFD700;
-    text-align: center;
-    margin-bottom: 40px;
-}
+    .lesson-container h2 {
+        font-size: 36px;
+        color: #FFD700;
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
 .lesson-grid {
     display: grid;
@@ -60,10 +85,43 @@
     font-size: 18px;
     font-weight: 500;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.lesson-card:hover {
-    transform: translateY(-5px);
-    background-color: #FFD700;
-    color: #000;
+    .lesson-card:hover {
+        transform: translateY(-5px);
+        background-color: #FFD700;
+        color: #000;
+    }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text .tagline {
+        font-size: 20px;
+    }
+
+    .lesson-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text .tagline {
+        font-size: 18px;
+    }
+
+    .lesson-grid {
+        grid-template-columns: 1fr;
+    }
 }

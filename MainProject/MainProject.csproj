@@ -118,7 +118,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Content\home.css" />
     <Content Include="Content\lesson.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\mainpage.css" />
@@ -139,6 +138,7 @@
     <Content Include="img\ChatGPT Image 30 июн. 2025 г., 11_25_08.png" />
     <Content Include="img\eb0ed0f14774acb86362a925701d10a4.mp4" />
     <Content Include="img\logo.png" />
+    <Content Include="img\MainBG.jpg" />
     <Content Include="lesson.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
