@@ -4,29 +4,8 @@
 <html>
 <head>
     <title>Digital Literacy Lessons</title>
-    <style>
-        body {
-            background: #000;
-            color: #fff;
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .lesson-box {
-            background: #111;
-            margin: 10px;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ff004f;
-        }
-
-        a.lesson-link {
-            color: #ff004f;
-            text-decoration: none;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="Content/styles.css" />
+    <link rel="stylesheet" href="Content/home.css" />
 </head>
 <body>
     <h1>Welcome, <%= Session["username"] %>!</h1>

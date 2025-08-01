@@ -100,6 +100,8 @@
     <Content Include="AboutUs.aspx" />
     <Content Include="AdminNew.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\aboutus.css" />
+    <Content Include="Content\adminnew.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -116,7 +118,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\home.css" />
+    <Content Include="Content\lesson.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\mainpage.css" />
+    <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />

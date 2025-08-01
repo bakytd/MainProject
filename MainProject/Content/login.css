@@ -1,0 +1,64 @@
+/* Login page specific styles */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px gold;
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: gold;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid gold;
+    color: white;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.register-link {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.register-link a {
+    color: gold;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-link a:hover {
+    color: white;
+    text-decoration: underline;
+}
