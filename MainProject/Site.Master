@@ -19,6 +19,7 @@
                     <span class="menu-icon" onclick="toggleMenu()">☰</span>
                     <ul id="navLinks" runat="server">
                         <li><a href="MainPage.aspx">Home</a></li>
+                        <li><a href="Lessons.aspx">Lessons</a></li>
                         <li><a href="AboutUs.aspx">About</a></li>
                         <asp:PlaceHolder ID="phNotLoggedIn" runat="server">
                             <li><a href="Login.aspx">Login</a></li>

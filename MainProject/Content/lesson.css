@@ -1,11 +1,4 @@
 /* lesson.aspx page specific styles */
-body {
-    background: #0d0d0d;
-    color: #f0f0f0;
-    margin: 0;
-    padding: 60px 10vw;
-    box-sizing: border-box;
-}
 
 h2 {
     text-align: center;
@@ -23,20 +16,42 @@ video {
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
 }
 
-.question-block {
-    margin-top: 50px;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
-}
-
 .question-block label {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
     display: block;
     color: #ffd700;
+}
+
+.lesson-container {
+    color max-width: 800px;
+    margin: 0 auto;
+    padding: 2dvh 20dvw;
+}
+
+.lesson-video {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.question-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #141414;
+    border-radius: 5px;
+}
+
+.submit-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 .aspNetRadioButtonList input[type="radio"] {
@@ -75,3 +90,4 @@ video {
     color: #ff4f4f;
     font-weight: bold;
 }
+

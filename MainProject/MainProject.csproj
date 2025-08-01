@@ -124,6 +124,7 @@
     <Content Include="Content\register.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\styles.css" />
+    <Content Include="Content\lessons.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="img\AboutUs.jpg" />
@@ -139,7 +140,8 @@
     <Content Include="img\eb0ed0f14774acb86362a925701d10a4.mp4" />
     <Content Include="img\logo.png" />
     <Content Include="img\MainBG.jpg" />
-    <Content Include="lesson.aspx" />
+    <Content Include="LessonDetail.aspx" />
+    <Content Include="Lessons.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -171,7 +173,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="MainPage.aspx" />
-    <Content Include="MyDB1.dacpac" />
     <Content Include="App_Data\MyDB1.dacpac" />
     <Content Include="Site.Master" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -230,6 +231,20 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LessonDetail.aspx.cs">
+      <DependentUpon>LessonDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LessonDetail.aspx.designer.cs">
+      <DependentUpon>LessonDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lessons.aspx.cs">
+      <DependentUpon>Lessons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lessons.aspx.designer.cs">
+      <DependentUpon>Lessons.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,13 +254,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="lesson.aspx.cs">
-      <DependentUpon>lesson.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="lesson.aspx.designer.cs">
-      <DependentUpon>lesson.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

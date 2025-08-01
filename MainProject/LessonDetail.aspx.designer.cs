@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1
+namespace MainProject
 {
 
 
-    public partial class lesson
+    public partial class LessonDetail
     {
 
         /// <summary>
